@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'EUI' target in the 'EUI' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif

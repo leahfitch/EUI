@@ -1,0 +1,233 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DD72286C146E16F400149264 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD72286B146E16F400149264 /* Foundation.framework */; };
+		DD722872146E16F400149264 /* EUI.m in Sources */ = {isa = PBXBuildFile; fileRef = DD722871146E16F400149264 /* EUI.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DD722868146E16F400149264 /* libEUI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEUI.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD72286B146E16F400149264 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DD72286F146E16F400149264 /* EUI-Prefix.pch */ = {isa = PBXFileReference; path = "EUI-Prefix.pch"; sourceTree = "<group>"; };
+		DD722870146E16F400149264 /* EUI.h */ = {isa = PBXFileReference; path = EUI.h; sourceTree = "<group>"; };
+		DD722871146E16F400149264 /* EUI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EUI.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DD722865146E16F400149264 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD72286C146E16F400149264 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DD72285D146E16F400149264 = {
+			isa = PBXGroup;
+			children = (
+				DD72286D146E16F400149264 /* EUI */,
+				DD72286A146E16F400149264 /* Frameworks */,
+				DD722869146E16F400149264 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DD722869146E16F400149264 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DD722868146E16F400149264 /* libEUI.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DD72286A146E16F400149264 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DD72286B146E16F400149264 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DD72286D146E16F400149264 /* EUI */ = {
+			isa = PBXGroup;
+			children = (
+				DD722870146E16F400149264 /* EUI.h */,
+				DD722871146E16F400149264 /* EUI.m */,
+				DD72286E146E16F400149264 /* Supporting Files */,
+			);
+			path = EUI;
+			sourceTree = "<group>";
+		};
+		DD72286E146E16F400149264 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DD72286F146E16F400149264 /* EUI-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		DD722866146E16F400149264 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		DD722867146E16F400149264 /* EUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD722875146E16F400149264 /* Build configuration list for PBXNativeTarget "EUI" */;
+			buildPhases = (
+				DD722864146E16F400149264 /* Sources */,
+				DD722865146E16F400149264 /* Frameworks */,
+				DD722866146E16F400149264 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EUI;
+			productName = EUI;
+			productReference = DD722868146E16F400149264 /* libEUI.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DD72285F146E16F400149264 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = DD722862146E16F400149264 /* Build configuration list for PBXProject "EUI" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DD72285D146E16F400149264;
+			productRefGroup = DD722869146E16F400149264 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DD722867146E16F400149264 /* EUI */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DD722864146E16F400149264 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD722872146E16F400149264 /* EUI.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		DD722873146E16F400149264 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DD722874146E16F400149264 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DD722876146E16F400149264 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/EUI.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EUI/EUI-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		DD722877146E16F400149264 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/EUI.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EUI/EUI-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DD722862146E16F400149264 /* Build configuration list for PBXProject "EUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD722873146E16F400149264 /* Debug */,
+				DD722874146E16F400149264 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD722875146E16F400149264 /* Build configuration list for PBXNativeTarget "EUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD722876146E16F400149264 /* Debug */,
+				DD722877146E16F400149264 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DD72285F146E16F400149264 /* Project object */;
+}
