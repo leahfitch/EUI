@@ -9,14 +9,26 @@
 /* Begin PBXBuildFile section */
 		DD72286C146E16F400149264 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD72286B146E16F400149264 /* Foundation.framework */; };
 		DD722872146E16F400149264 /* EUI.m in Sources */ = {isa = PBXBuildFile; fileRef = DD722871146E16F400149264 /* EUI.m */; };
+		DD722883146E1FDC00149264 /* EUILayout.h in Headers */ = {isa = PBXBuildFile; fileRef = DD722881146E1FDC00149264 /* EUILayout.h */; };
+		DD722884146E1FDC00149264 /* EUILayout.m in Sources */ = {isa = PBXBuildFile; fileRef = DD722882146E1FDC00149264 /* EUILayout.m */; };
+		DD722887146E200E00149264 /* EUIContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = DD722885146E200E00149264 /* EUIContainer.h */; };
+		DD722888146E200E00149264 /* EUIContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = DD722886146E200E00149264 /* EUIContainer.m */; };
+		DD72288B146E284100149264 /* EUIBoxLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = DD722889146E284100149264 /* EUIBoxLayout.h */; };
+		DD72288C146E284100149264 /* EUIBoxLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = DD72288A146E284100149264 /* EUIBoxLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DD722868146E16F400149264 /* libEUI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEUI.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD72286B146E16F400149264 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		DD72286F146E16F400149264 /* EUI-Prefix.pch */ = {isa = PBXFileReference; path = "EUI-Prefix.pch"; sourceTree = "<group>"; };
-		DD722870146E16F400149264 /* EUI.h */ = {isa = PBXFileReference; path = EUI.h; sourceTree = "<group>"; };
+		DD72286F146E16F400149264 /* EUI-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EUI-Prefix.pch"; sourceTree = "<group>"; };
+		DD722870146E16F400149264 /* EUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EUI.h; sourceTree = "<group>"; };
 		DD722871146E16F400149264 /* EUI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EUI.m; sourceTree = "<group>"; };
+		DD722881146E1FDC00149264 /* EUILayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EUILayout.h; path = Layouts/EUILayout.h; sourceTree = "<group>"; };
+		DD722882146E1FDC00149264 /* EUILayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EUILayout.m; path = Layouts/EUILayout.m; sourceTree = "<group>"; };
+		DD722885146E200E00149264 /* EUIContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EUIContainer.h; sourceTree = "<group>"; };
+		DD722886146E200E00149264 /* EUIContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EUIContainer.m; sourceTree = "<group>"; };
+		DD722889146E284100149264 /* EUIBoxLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EUIBoxLayout.h; path = Layouts/EUIBoxLayout.h; sourceTree = "<group>"; };
+		DD72288A146E284100149264 /* EUIBoxLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EUIBoxLayout.m; path = Layouts/EUIBoxLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +71,9 @@
 		DD72286D146E16F400149264 /* EUI */ = {
 			isa = PBXGroup;
 			children = (
+				DD722885146E200E00149264 /* EUIContainer.h */,
+				DD722886146E200E00149264 /* EUIContainer.m */,
+				DD722878146E170300149264 /* Layouts */,
 				DD722870146E16F400149264 /* EUI.h */,
 				DD722871146E16F400149264 /* EUI.m */,
 				DD72286E146E16F400149264 /* Supporting Files */,
@@ -74,6 +89,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		DD722878146E170300149264 /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				DD722881146E1FDC00149264 /* EUILayout.h */,
+				DD722882146E1FDC00149264 /* EUILayout.m */,
+				DD722889146E284100149264 /* EUIBoxLayout.h */,
+				DD72288A146E284100149264 /* EUIBoxLayout.m */,
+			);
+			name = Layouts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -81,6 +107,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD722883146E1FDC00149264 /* EUILayout.h in Headers */,
+				DD722887146E200E00149264 /* EUIContainer.h in Headers */,
+				DD72288B146E284100149264 /* EUIBoxLayout.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,6 +164,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD722872146E16F400149264 /* EUI.m in Sources */,
+				DD722884146E1FDC00149264 /* EUILayout.m in Sources */,
+				DD722888146E200E00149264 /* EUIContainer.m in Sources */,
+				DD72288C146E284100149264 /* EUIBoxLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
