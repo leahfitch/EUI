@@ -2,8 +2,8 @@
 //  EUIBoxLayout.h
 //  EUI
 //
-//  Created by 1234 1234 on 11/11/11.
-//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+//  Created by Elisha Cook on 11/11/11.
+//  Copyright (c) 2011 Elisha Cook. All rights reserved.
 //
 
 #import "EUILayout.h"
@@ -15,7 +15,14 @@ typedef enum
 } EUIBoxLayoutDirection;
 
 @interface EUIBoxLayout : EUILayout
+{
+    NSInteger lastSubviewIndex;
+    CGFloat curPos;
+    CGFloat maxWidth;
+    CGFloat maxHeight;
+}
 @property (nonatomic) CGFloat spacing;
 @property (nonatomic) EUIBoxLayoutDirection direction;
+
 
 @end

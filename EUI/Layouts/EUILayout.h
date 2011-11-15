@@ -2,8 +2,8 @@
 //  EUILayout.h
 //  EUI
 //
-//  Created by 1234 1234 on 11/11/11.
-//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+//  Created by Elisha Cook on 11/11/11.
+//  Copyright (c) 2011 Elisha Cook. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -16,12 +16,16 @@
 }
 @property (weak,nonatomic)  EUIContainer *container;
 
-- (void)didAddSubview:(UIView *)view;
+- (void)layoutContainer;
 
-- (void)willRemoveSubview:(UIView *)view;
+- (void)layoutContainerWithSubviewSizes:(CGSize [])subviewSizes;
 
-- (void)subviewBoundsChanged:(UIView *)view;
+- (CGPoint)pointOfSubview:(NSUInteger)i withSize:(CGSize)size;
 
-- (void)containerBoundsChanged;
+- (CGSize)containerSize;
+
+- (void)willLayoutContainer;
+
+- (void)didLayoutContainer;
 
 @end

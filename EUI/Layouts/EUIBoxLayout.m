@@ -2,8 +2,8 @@
 //  EUIBoxLayout.m
 //  EUI
 //
-//  Created by 1234 1234 on 11/11/11.
-//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+//  Created by Elisha Cook on 11/11/11.
+//  Copyright (c) 2011 Elisha Cook. All rights reserved.
 //
 
 #import "EUIBoxLayout.h"
@@ -15,183 +15,86 @@
 @synthesize spacing, direction;
 
 
-- (CGFloat)getPosAfterView:(UIView *)view
+- (CGSize)containerSize
 {
-    if (direction == EUIBoxLayoutDirectionVertical)
-    {
-        return view.frame.origin.y + view.frame.size.height + spacing;
-    }
-    else
-    {
-        return view.frame.origin.x + view.frame.size.width + spacing;
-    }
-}
-
-
-- (void)setPos:(CGFloat)pos forView:(UIView *)view
-{
-    CGRect f = view.frame;
+    CGSize size = self.container.frame.size;
     
-    if (direction == EUIBoxLayoutDirectionVertical)
-    {
-        f.origin.y = pos;
-    }
-    else
-    {
-        f.origin.x = pos;
-    }
-}
-
-
-- (CGFloat)getStartPadding
-{
-    if (direction == EUIBoxLayoutDirectionVertical)
-    {
-        return container.padding.top;
-    }
-    else
-    {
-        return container.padding.left;
-    }
-}
-
-- (CGFloat)getMaxHeight
-{
-    CGFloat max = 0;
-    
-    for (UIView *v in container.subviews)
-    {
-        if (v.frame.size.height > max)
-        {
-            max = v.frame.size.height;
-        }
-    }
-    
-    return max;
-}
-
-- (CGFloat)getMaxWidth
-{
-    CGFloat max = 0;
-    
-    for (UIView *v in container.subviews)
-    {
-        if (v.frame.size.width > max)
-        {
-            max = v.frame.size.width;
-        }
-    }
-    
-    return max;
-}
-
-- (void)updateContainerSizeForPos:(CGFloat)pos
-{
-    CGRect bounds = container.bounds;
+    curPos -= spacing;
     
     if (self.direction == EUIBoxLayoutDirectionVertical)
     {
-        pos += container.padding.bottom;
-        bounds.size.height = pos;
-        bounds.size.width = container.padding.left + [self getMaxWidth] + container.padding.right;
+        curPos += self.container.padding.bottom;
+        size.height = curPos;
+        size.width = self.container.padding.left + maxWidth + self.container.padding.right;
     }
     else
     {
-        pos += container.padding.right;
-        bounds.size.height = pos;
-        bounds.size.width = container.padding.top + [self getMaxHeight] + container.padding.bottom;
+        curPos += self.container.padding.right;
+        size.width = curPos;
+        size.height = self.container.padding.top + maxHeight + self.container.padding.bottom;
     }
     
-    container.bounds = bounds;
+    return size;
 }
 
-- (void)reflowFrom:(UIView *)subview ignoringView:(UIView *)ignoredView
+
+- (CGPoint)pointOfSubview:(NSUInteger)i withSize:(CGSize)size
 {
-    NSUInteger i;
-    CGFloat pos;
+    CGPoint p;
     
-    if (subview == nil)
+    if (i == lastSubviewIndex+1)
     {
-        i = pos = [self getStartPadding];
+        if (direction == EUIBoxLayoutDirectionVertical)
+        {
+            p.y = curPos;
+            p.x = self.container.padding.left;
+            curPos += size.height + spacing;
+        }
+        else
+        {
+            p.x = curPos;
+            p.y = self.container.padding.top;
+            curPos += size.width + spacing;
+        }
+        
+        maxWidth = fmaxf(maxWidth, size.width);
+        maxHeight = fmaxf(maxHeight, size.height);
+        lastSubviewIndex++;
     }
     else
     {
-        i = [container.subviews indexOfObject:subview] + 1;
-        
-        UIView *lastView = [container.subviews objectAtIndex:i-1];
-        
-        if (lastView == ignoredView)
+        if (i == 0)
         {
-            lastView = [container.subviews objectAtIndex:i-1];
+            p.x = self.container.padding.left;
+            p.y = self.container.padding.top;
+        }
+        else
+        {
+            UIView *lastView = [self.container.subviews objectAtIndex:i-1];
             
-            if (!lastView)
+            if (direction == EUIBoxLayoutDirectionVertical)
             {
-                i = pos = [self getStartPadding];
+                p.x = self.container.padding.left;
+                p.y = lastView.frame.origin.y + lastView.frame.size.height + spacing;
+            }
+            else
+            {
+                p.x = lastView.frame.origin.x + lastView.frame.size.width + spacing;
+                p.y = self.container.padding.top;
             }
         }
-        
-        if (lastView)
-        {
-            pos = [self getPosAfterView:lastView];
-        }
     }
     
-    BOOL viewsProcessed = FALSE;
-    
-    for (; i<[container.subviews count]; i++)
-    {
-        UIView *v = [container.subviews objectAtIndex:i];
-        
-        if (v == ignoredView)
-        {
-            continue;
-        }
-        
-        [self setPos:pos forView:v];
-        pos = [self getPosAfterView:v];
-        
-        viewsProcessed = TRUE;
-    }
-    
-    if (viewsProcessed)
-    {
-        pos -= spacing;
-    }
-    
-    [self updateContainerSizeForPos:pos];
+    return p;
 }
 
-- (void)reflowFrom:(UIView *)subview
-{
-    [self reflowFrom:subview ignoringView:nil];
-}
 
-- (void)didAddSubview:(UIView *)view
+- (void)willLayoutContainer
 {
-    [self reflowFrom:view];
-}
-
-- (void)willRemoveSubview:(UIView *)view
-{
-    NSInteger i = [container.subviews indexOfObject:view] - 1;
-    
-    if (i < 0)
-    {
-        [self reflowFrom:nil ignoringView:view];
-        return;
-    }
-    
-    [self reflowFrom:[container.subviews objectAtIndex:i]];
-}
-
-- (void)subviewBoundsChanged:(UIView *)view
-{
-    [self reflowFrom:view];
-}
-
-- (void)containerBoundsChanged
-{
-    // Box layouts shouldn't be resized manually.
+    lastSubviewIndex = -1;
+    curPos = self.direction == EUIBoxLayoutDirectionVertical ? self.container.padding.top : self.container.padding.left;
+    maxWidth = 0;
+    maxHeight = 0;
 }
 
 @end

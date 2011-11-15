@@ -2,8 +2,8 @@
 //  EUIContainer.m
 //  EUI
 //
-//  Created by 1234 1234 on 11/11/11.
-//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+//  Created by Elisha Cook on 11/11/11.
+//  Copyright (c) 2011 Elisha Cook. All rights reserved.
 //
 
 #import "EUIContainer.h"
@@ -12,15 +12,7 @@
 
 @implementation EUIContainer
 
-@synthesize padding, layout;
-
-
-- (void)setPadding:(UIEdgeInsets)newPadding
-{
-    padding = newPadding;
-    [self.layout containerBoundsChanged];
-}
-
+@synthesize padding, layout, delegate;
 
 - (void)setLayout:(EUILayout *)newLayout
 {
@@ -28,33 +20,29 @@
     layout.container = self;
 }
 
-
-- (void)setBounds:(CGRect)bounds
-{
-    [super setBounds:bounds];
-    [self.layout containerBoundsChanged];
-}
-
 - (void)setFrame:(CGRect)newFrame
 {
     CGRect oldFrame = self.frame;
     [super setFrame:newFrame];
     
-    if (oldFrame.size.width != newFrame.size.width || oldFrame.size.height != newFrame.size.height)
+    if (newFrame.size.width != oldFrame.size.width ||
+        newFrame.size.height != oldFrame.size.height)
     {
-        [self.layout containerBoundsChanged];
+        [self.delegate containerSizeChanged:self];
     }
 }
 
-- (void)didAddSubview:(UIView *)subview
-{
-    [self.layout didAddSubview:subview];
-}
 
-
-- (void)willRemoveSubview:(UIView *)subview
+- (void)setBounds:(CGRect)newBounds
 {
-    [self.layout willRemoveSubview:subview];
+    CGRect oldBounds = self.bounds;
+    [super setBounds:newBounds];
+    
+    if (newBounds.size.width != oldBounds.size.width ||
+        newBounds.size.height != oldBounds.size.height)
+    {
+        [self.delegate containerSizeChanged:self];
+    }
 }
 
 @end

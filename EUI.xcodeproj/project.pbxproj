@@ -7,8 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD5494DF1472ABE600535BB0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD7E5A3114705FC5004E8522 /* UIKit.framework */; };
+		DD5494E01472ABE600535BB0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD72286B146E16F400149264 /* Foundation.framework */; };
+		DD5494E11472ABE600535BB0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD7E5A3414705FC5004E8522 /* CoreGraphics.framework */; };
+		DD5494ED1472ABE600535BB0 /* EUIKSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DD5494EC1472ABE600535BB0 /* EUIKSAppDelegate.m */; };
+		DD5494F01472ABE600535BB0 /* EUIKSMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD5494EF1472ABE600535BB0 /* EUIKSMasterViewController.m */; };
+		DD5494F31472ABE600535BB0 /* EUIKSDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD5494F21472ABE600535BB0 /* EUIKSDetailViewController.m */; };
+		DD5494F61472ABE600535BB0 /* EUIKSMasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD5494F41472ABE600535BB0 /* EUIKSMasterViewController.xib */; };
+		DD5494F91472ABE600535BB0 /* EUIKSDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD5494F71472ABE600535BB0 /* EUIKSDetailViewController.xib */; };
+		DD5494FD1472ABF300535BB0 /* libEUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD722868146E16F400149264 /* libEUI.a */; };
+		DD5495051472B0BF00535BB0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DD5495031472B0BF00535BB0 /* main.m */; };
 		DD72286C146E16F400149264 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD72286B146E16F400149264 /* Foundation.framework */; };
-		DD722872146E16F400149264 /* EUI.m in Sources */ = {isa = PBXBuildFile; fileRef = DD722871146E16F400149264 /* EUI.m */; };
 		DD722883146E1FDC00149264 /* EUILayout.h in Headers */ = {isa = PBXBuildFile; fileRef = DD722881146E1FDC00149264 /* EUILayout.h */; };
 		DD722884146E1FDC00149264 /* EUILayout.m in Sources */ = {isa = PBXBuildFile; fileRef = DD722882146E1FDC00149264 /* EUILayout.m */; };
 		DD722887146E200E00149264 /* EUIContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = DD722885146E200E00149264 /* EUIContainer.h */; };
@@ -17,21 +26,56 @@
 		DD72288C146E284100149264 /* EUIBoxLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = DD72288A146E284100149264 /* EUIBoxLayout.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		DD5494FE1472ABF900535BB0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD72285F146E16F400149264 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD722867146E16F400149264;
+			remoteInfo = EUI;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		DD3A96AF1472B11B00BC6933 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DD3A96B11472B92700BC6933 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
+		DD5494DD1472ABE600535BB0 /* EUI Kitchen Sink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EUI Kitchen Sink.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD5494EC1472ABE600535BB0 /* EUIKSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EUIKSAppDelegate.m; sourceTree = "<group>"; };
+		DD5494EE1472ABE600535BB0 /* EUIKSMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EUIKSMasterViewController.h; sourceTree = "<group>"; };
+		DD5494EF1472ABE600535BB0 /* EUIKSMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EUIKSMasterViewController.m; sourceTree = "<group>"; };
+		DD5494F11472ABE600535BB0 /* EUIKSDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EUIKSDetailViewController.h; sourceTree = "<group>"; };
+		DD5494F21472ABE600535BB0 /* EUIKSDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EUIKSDetailViewController.m; sourceTree = "<group>"; };
+		DD5494F51472ABE600535BB0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/EUIKSMasterViewController.xib; sourceTree = "<group>"; };
+		DD5494F81472ABE600535BB0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/EUIKSDetailViewController.xib; sourceTree = "<group>"; };
+		DD5495001472B0BF00535BB0 /* EUI Kitchen Sink-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "EUI Kitchen Sink-Info.plist"; sourceTree = "<group>"; };
+		DD5495011472B0BF00535BB0 /* EUI Kitchen Sink-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EUI Kitchen Sink-Prefix.pch"; sourceTree = "<group>"; };
+		DD5495021472B0BF00535BB0 /* EUIKSAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EUIKSAppDelegate.h; sourceTree = "<group>"; };
+		DD5495031472B0BF00535BB0 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DD722868146E16F400149264 /* libEUI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEUI.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD72286B146E16F400149264 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DD72286F146E16F400149264 /* EUI-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EUI-Prefix.pch"; sourceTree = "<group>"; };
-		DD722870146E16F400149264 /* EUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EUI.h; sourceTree = "<group>"; };
-		DD722871146E16F400149264 /* EUI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EUI.m; sourceTree = "<group>"; };
 		DD722881146E1FDC00149264 /* EUILayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EUILayout.h; path = Layouts/EUILayout.h; sourceTree = "<group>"; };
 		DD722882146E1FDC00149264 /* EUILayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EUILayout.m; path = Layouts/EUILayout.m; sourceTree = "<group>"; };
 		DD722885146E200E00149264 /* EUIContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EUIContainer.h; sourceTree = "<group>"; };
 		DD722886146E200E00149264 /* EUIContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EUIContainer.m; sourceTree = "<group>"; };
 		DD722889146E284100149264 /* EUIBoxLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EUIBoxLayout.h; path = Layouts/EUIBoxLayout.h; sourceTree = "<group>"; };
 		DD72288A146E284100149264 /* EUIBoxLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EUIBoxLayout.m; path = Layouts/EUIBoxLayout.m; sourceTree = "<group>"; };
+		DD7E5A3114705FC5004E8522 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DD7E5A3414705FC5004E8522 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		DD5494DA1472ABE500535BB0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD5494FD1472ABF300535BB0 /* libEUI.a in Frameworks */,
+				DD5494DF1472ABE600535BB0 /* UIKit.framework in Frameworks */,
+				DD5494E01472ABE600535BB0 /* Foundation.framework in Frameworks */,
+				DD5494E11472ABE600535BB0 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DD722865146E16F400149264 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -43,10 +87,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD5494E21472ABE600535BB0 /* EUI Kitchen Sink */ = {
+			isa = PBXGroup;
+			children = (
+				DD5495031472B0BF00535BB0 /* main.m */,
+				DD5495021472B0BF00535BB0 /* EUIKSAppDelegate.h */,
+				DD5494EC1472ABE600535BB0 /* EUIKSAppDelegate.m */,
+				DD5494EE1472ABE600535BB0 /* EUIKSMasterViewController.h */,
+				DD5494EF1472ABE600535BB0 /* EUIKSMasterViewController.m */,
+				DD5494F11472ABE600535BB0 /* EUIKSDetailViewController.h */,
+				DD5494F21472ABE600535BB0 /* EUIKSDetailViewController.m */,
+				DD5494F41472ABE600535BB0 /* EUIKSMasterViewController.xib */,
+				DD5494F71472ABE600535BB0 /* EUIKSDetailViewController.xib */,
+				DD5494E31472ABE600535BB0 /* Supporting Files */,
+			);
+			path = "EUI Kitchen Sink";
+			sourceTree = "<group>";
+		};
+		DD5494E31472ABE600535BB0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DD3A96AE1472B11B00BC6933 /* InfoPlist.strings */,
+				DD5495001472B0BF00535BB0 /* EUI Kitchen Sink-Info.plist */,
+				DD5495011472B0BF00535BB0 /* EUI Kitchen Sink-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		DD72285D146E16F400149264 = {
 			isa = PBXGroup;
 			children = (
+				DD3A96B11472B92700BC6933 /* README.markdown */,
 				DD72286D146E16F400149264 /* EUI */,
+				DD5494E21472ABE600535BB0 /* EUI Kitchen Sink */,
 				DD72286A146E16F400149264 /* Frameworks */,
 				DD722869146E16F400149264 /* Products */,
 			);
@@ -56,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				DD722868146E16F400149264 /* libEUI.a */,
+				DD5494DD1472ABE600535BB0 /* EUI Kitchen Sink.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -64,6 +138,8 @@
 			isa = PBXGroup;
 			children = (
 				DD72286B146E16F400149264 /* Foundation.framework */,
+				DD7E5A3114705FC5004E8522 /* UIKit.framework */,
+				DD7E5A3414705FC5004E8522 /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -74,8 +150,6 @@
 				DD722885146E200E00149264 /* EUIContainer.h */,
 				DD722886146E200E00149264 /* EUIContainer.m */,
 				DD722878146E170300149264 /* Layouts */,
-				DD722870146E16F400149264 /* EUI.h */,
-				DD722871146E16F400149264 /* EUI.m */,
 				DD72286E146E16F400149264 /* Supporting Files */,
 			);
 			path = EUI;
@@ -116,6 +190,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		DD5494DC1472ABE500535BB0 /* EUI Kitchen Sink */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD5494FA1472ABE600535BB0 /* Build configuration list for PBXNativeTarget "EUI Kitchen Sink" */;
+			buildPhases = (
+				DD5494D91472ABE500535BB0 /* Sources */,
+				DD5494DA1472ABE500535BB0 /* Frameworks */,
+				DD5494DB1472ABE500535BB0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DD5494FF1472ABF900535BB0 /* PBXTargetDependency */,
+			);
+			name = "EUI Kitchen Sink";
+			productName = "EUI Kitchen Sink";
+			productReference = DD5494DD1472ABE600535BB0 /* EUI Kitchen Sink.app */;
+			productType = "com.apple.product-type.application";
+		};
 		DD722867146E16F400149264 /* EUI */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DD722875146E16F400149264 /* Build configuration list for PBXNativeTarget "EUI" */;
@@ -140,6 +232,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "Elisha Cook";
 			};
 			buildConfigurationList = DD722862146E16F400149264 /* Build configuration list for PBXProject "EUI" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -154,16 +247,39 @@
 			projectRoot = "";
 			targets = (
 				DD722867146E16F400149264 /* EUI */,
+				DD5494DC1472ABE500535BB0 /* EUI Kitchen Sink */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		DD5494DB1472ABE500535BB0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD5494F61472ABE600535BB0 /* EUIKSMasterViewController.xib in Resources */,
+				DD5494F91472ABE600535BB0 /* EUIKSDetailViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		DD5494D91472ABE500535BB0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD5494ED1472ABE600535BB0 /* EUIKSAppDelegate.m in Sources */,
+				DD5494F01472ABE600535BB0 /* EUIKSMasterViewController.m in Sources */,
+				DD5494F31472ABE600535BB0 /* EUIKSDetailViewController.m in Sources */,
+				DD5495051472B0BF00535BB0 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DD722864146E16F400149264 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD722872146E16F400149264 /* EUI.m in Sources */,
 				DD722884146E1FDC00149264 /* EUILayout.m in Sources */,
 				DD722888146E200E00149264 /* EUIContainer.m in Sources */,
 				DD72288C146E284100149264 /* EUIBoxLayout.m in Sources */,
@@ -172,7 +288,69 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		DD5494FF1472ABF900535BB0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DD722867146E16F400149264 /* EUI */;
+			targetProxy = DD5494FE1472ABF900535BB0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DD3A96AE1472B11B00BC6933 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD3A96AF1472B11B00BC6933 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DD5494F41472ABE600535BB0 /* EUIKSMasterViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD5494F51472ABE600535BB0 /* en */,
+			);
+			name = EUIKSMasterViewController.xib;
+			sourceTree = "<group>";
+		};
+		DD5494F71472ABE600535BB0 /* EUIKSDetailViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD5494F81472ABE600535BB0 /* en */,
+			);
+			name = EUIKSDetailViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		DD5494FB1472ABE600535BB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EUI Kitchen Sink/EUI Kitchen Sink-Prefix.pch";
+				INFOPLIST_FILE = "EUI Kitchen Sink/EUI Kitchen Sink-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DD5494FC1472ABE600535BB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EUI Kitchen Sink/EUI Kitchen Sink-Prefix.pch";
+				INFOPLIST_FILE = "EUI Kitchen Sink/EUI Kitchen Sink-Info.plist";
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 		DD722873146E16F400149264 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -242,6 +420,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		DD5494FA1472ABE600535BB0 /* Build configuration list for PBXNativeTarget "EUI Kitchen Sink" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD5494FB1472ABE600535BB0 /* Debug */,
+				DD5494FC1472ABE600535BB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		DD722862146E16F400149264 /* Build configuration list for PBXProject "EUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -258,6 +445,7 @@
 				DD722877146E16F400149264 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
