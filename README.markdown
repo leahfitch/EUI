@@ -16,4 +16,7 @@ its containers subviews when it is sent the message `layoutContainer`. You can a
 *and* specify the sizes for each subview at the same time by sending `layoutContainerWithSubviewSizes`.
 This makes it possible to animate a lot of changes in one block smoothly.
 
-Check out the example app for details.
+Don't forget to check out the example app if it's not clicking.
+
+## License
+You can do whatever you like with it 'cuz it's MIT.

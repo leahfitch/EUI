@@ -39,6 +39,7 @@
 /* Begin PBXFileReference section */
 		DD3A96AF1472B11B00BC6933 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DD3A96B11472B92700BC6933 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
+		DD3A96B61472BF5F00BC6933 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		DD5494DD1472ABE600535BB0 /* EUI Kitchen Sink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EUI Kitchen Sink.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD5494EC1472ABE600535BB0 /* EUIKSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EUIKSAppDelegate.m; sourceTree = "<group>"; };
 		DD5494EE1472ABE600535BB0 /* EUIKSMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EUIKSMasterViewController.h; sourceTree = "<group>"; };
@@ -117,6 +118,7 @@
 		DD72285D146E16F400149264 = {
 			isa = PBXGroup;
 			children = (
+				DD3A96B61472BF5F00BC6933 /* LICENSE */,
 				DD3A96B11472B92700BC6933 /* README.markdown */,
 				DD72286D146E16F400149264 /* EUI */,
 				DD5494E21472ABE600535BB0 /* EUI Kitchen Sink */,
