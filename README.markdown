@@ -12,7 +12,7 @@ static library or just copy the sources.
 Ok, it's pretty simple. There is an `EUIContainer` class which is a subclass of `UIView`. To use layouts,
 you create an `EUIContainer` and set it's `layout` property to one of the `EUILayout` classes. Containers
 can have a delegate which will get notified when the size of the container changes. `EUILayout` will lay out
-its containers subviews when it is sent the message `layoutContainer`. You can also layout the container
+its container's subviews when it is sent the message `layoutContainer`. You can also layout the container
 *and* specify the sizes for each subview at the same time by sending `layoutContainerWithSubviewSizes`.
 This makes it possible to animate a lot of changes in one block smoothly.
 
