@@ -24,4 +24,10 @@ EUIContainerDelegate>
 
 - (void)boxLayoutVertical;
 
+- (void)flowLayoutLeft;
+
+- (void)flowLayoutRight;
+
+- (void)flowLayoutCenter;
+
 @end

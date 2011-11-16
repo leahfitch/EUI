@@ -18,14 +18,8 @@
 
 - (void)layoutContainer;
 
-- (void)layoutContainerWithSubviewSizes:(CGSize [])subviewSizes;
+- (void)layoutContainerWithSubviewSizes:(CGSize *)subviewSizes;
 
-- (CGPoint)pointOfSubview:(NSUInteger)i withSize:(CGSize)size;
-
-- (CGSize)containerSize;
-
-- (void)willLayoutContainer;
-
-- (void)didLayoutContainer;
+- (void)updatePoints:(CGPoint *)points forSizes:(CGSize *)sizes;
 
 @end

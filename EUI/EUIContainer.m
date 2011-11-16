@@ -14,6 +14,16 @@
 
 @synthesize padding, layout, delegate;
 
+- (id)initWithFrame:(CGRect)frame
+{
+    if (self = [super initWithFrame:frame])
+    {
+        self.autoresizesSubviews = FALSE;
+    }
+    
+    return self;
+}
+
 - (void)setLayout:(EUILayout *)newLayout
 {
     layout = newLayout;

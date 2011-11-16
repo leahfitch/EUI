@@ -8,6 +8,7 @@
 
 #import "EUIKSDetailViewController.h"
 #import "EUIBoxLayout.h"
+#import "EUIFlowLayout.h"
 
 
 @implementation EUIKSDetailViewController
@@ -91,15 +92,13 @@
 
 - (void)regimentSubviews
 {
-    CGSize s = CGSizeMake(50, 50);
-    
     [UIView animateWithDuration:0.3 animations:^
      {
          CGSize sizes[[self.container.subviews count]];
          
          for (int i=0; i<[self.container.subviews count]; i++)
          {
-             sizes[i] = s;
+             sizes[i] = CGSizeMake(50, 50);
          }
          
          [self.container.layout layoutContainerWithSubviewSizes:sizes];
@@ -130,6 +129,57 @@
         [boxLayout layoutContainer];
     }];
 }
+
+- (void)flowLayoutLeft
+{
+    EUIFlowLayout *flowLayout = [[EUIFlowLayout alloc] init];
+    flowLayout.alignment = EUIFlowLayoutAlignmentLeft;
+    flowLayout.spacing = 12;
+    self.container.layout = flowLayout;
+    
+    [UIView animateWithDuration:0.3 animations:^
+    {
+        CGRect containerFrame = self.container.frame;
+        containerFrame.size.width = 650;
+        self.container.frame = containerFrame;
+        [self.container.layout layoutContainer];
+    }];
+}
+
+- (void)flowLayoutRight
+{
+    EUIFlowLayout *flowLayout = [[EUIFlowLayout alloc] init];
+    flowLayout.alignment = EUIFlowLayoutAlignmentRight;
+    flowLayout.spacing = 12;
+    self.container.layout = flowLayout;
+    
+    [UIView animateWithDuration:0.3 animations:^
+     {
+         CGRect containerFrame = self.container.frame;
+         containerFrame.size.width = 650;
+         self.container.frame = containerFrame;
+         [self.container.layout layoutContainer];
+     }];
+}
+
+
+- (void)flowLayoutCenter
+{
+    EUIFlowLayout *flowLayout = [[EUIFlowLayout alloc] init];
+    flowLayout.alignment = EUIFlowLayoutAlignmentCenter;
+    flowLayout.spacing = 12;
+    self.container.layout = flowLayout;
+    
+    [UIView animateWithDuration:0.3 animations:^
+     {
+         CGRect containerFrame = self.container.frame;
+         containerFrame.size.width = 650;
+         self.container.frame = containerFrame;
+         [self.container.layout layoutContainer];
+     }];
+}
+
+
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
 {

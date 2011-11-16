@@ -13,62 +13,34 @@
 
 @synthesize container;
 
-
-- (void)updateContainerSize
-{
-    CGRect containerFrame = self.container.frame;
-    containerFrame.size = [self containerSize];
-    self.container.frame = containerFrame;
-}
-
-
 - (void)layoutContainer
 {
-    [self willLayoutContainer];
+    CGSize sizes[[self.container.subviews count]];
     
     for (NSUInteger i=0; i<[self.container.subviews count]; i++)
     {
-        UIView *v = [self.container.subviews objectAtIndex:i];
-        CGPoint p = [self pointOfSubview:i withSize:v.frame.size];
-        v.frame = CGRectMake(p.x, p.y, v.frame.size.width, v.frame.size.height);
+        UIView *view = [self.container.subviews objectAtIndex:i];
+        sizes[i] = view.frame.size;
     }
     
-    [self updateContainerSize];
-    [self didLayoutContainer];
+    [self layoutContainerWithSubviewSizes:sizes];
 }
 
-- (void)layoutContainerWithSubviewSizes:(CGSize [])subviewSizes
+- (void)layoutContainerWithSubviewSizes:(CGSize *)subviewSizes
 {
-    [self willLayoutContainer];
+    CGPoint points[[self.container.subviews count]];
+    [self updatePoints:points forSizes:subviewSizes];
     
     for (int i=0; i<[self.container.subviews count]; i++)
     {
-        UIView *v = [self.container.subviews objectAtIndex:i];
-        CGSize s = subviewSizes[i];
-        CGPoint p = [self pointOfSubview:i withSize:s];
-        v.frame = CGRectMake(p.x, p.y, s.width, s.height);
+        UIView *view = [self.container.subviews objectAtIndex:i];
+        CGSize size = subviewSizes[i];
+        CGPoint point = points[i];
+        view.frame = CGRectMake(point.x, point.y, size.width, size.height);
     }
-    
-    [self updateContainerSize];
-    [self didLayoutContainer];
 }
 
-- (CGPoint)pointOfSubview:(NSUInteger)i withSize:(CGSize)size;
-{
-    return CGPointZero;
-}
-
-- (CGSize)containerSize
-{
-    return CGSizeZero;
-}
-
-- (void)willLayoutContainer
-{
-    
-}
-
-- (void)didLayoutContainer
+- (void)updatePoints:(CGPoint *)points forSizes:(CGSize *)sizes
 {
     
 }

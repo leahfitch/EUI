@@ -15,12 +15,6 @@ typedef enum
 } EUIBoxLayoutDirection;
 
 @interface EUIBoxLayout : EUILayout
-{
-    NSInteger lastSubviewIndex;
-    CGFloat curPos;
-    CGFloat maxWidth;
-    CGFloat maxHeight;
-}
 @property (nonatomic) CGFloat spacing;
 @property (nonatomic) EUIBoxLayoutDirection direction;
 

@@ -27,6 +27,9 @@
                               [NSArray arrayWithObjects:@"Regiment", [NSValue valueWithPointer:@selector(regimentSubviews)], nil],
                               [NSArray arrayWithObjects:@"Box Layout (horizontal)", [NSValue valueWithPointer:@selector(boxLayoutHorizontal)], nil],
                               [NSArray arrayWithObjects:@"Box Layout (vertical)", [NSValue valueWithPointer:@selector(boxLayoutVertical)], nil],
+                              [NSArray arrayWithObjects:@"Flow Layout (left)", [NSValue valueWithPointer:@selector(flowLayoutLeft)], nil],
+                              [NSArray arrayWithObjects:@"Flow Layout (right)", [NSValue valueWithPointer:@selector(flowLayoutRight)], nil],
+                              [NSArray arrayWithObjects:@"Flow Layout (center)", [NSValue valueWithPointer:@selector(flowLayoutCenter)], nil],
                               nil];
     }
     return self;

@@ -15,86 +15,43 @@
 @synthesize spacing, direction;
 
 
-- (CGSize)containerSize
+- (void)updatePoints:(CGPoint *)points forSizes:(CGSize *)sizes
 {
-    CGSize size = self.container.frame.size;
+    CGPoint curPoint = CGPointMake(self.container.padding.left, self.container.padding.right);
+    CGFloat maxWidth = 0;
+    CGFloat maxHeight = 0;
     
-    curPos -= spacing;
+    for (int i=0; i<[self.container.subviews count]; i++)
+    {
+        points[i] = curPoint;
+        CGSize size = sizes[i];
+        
+        if (self.direction == EUIBoxLayoutDirectionVertical)
+        {
+            curPoint.y += size.height + self.spacing;
+            maxWidth = fmaxf(maxWidth, size.width);
+        }
+        else
+        {
+            curPoint.x += size.width += self.spacing;
+            maxHeight = fmaxf(maxHeight, size.height);
+        }
+    }
+    
+    CGRect containerFrame = self.container.frame;
     
     if (self.direction == EUIBoxLayoutDirectionVertical)
     {
-        curPos += self.container.padding.bottom;
-        size.height = curPos;
-        size.width = self.container.padding.left + maxWidth + self.container.padding.right;
+        containerFrame.size = CGSizeMake(self.container.padding.left + self.container.padding.right + maxWidth, 
+                                   self.container.padding.bottom + (curPoint.y - self.spacing));
     }
     else
     {
-        curPos += self.container.padding.right;
-        size.width = curPos;
-        size.height = self.container.padding.top + maxHeight + self.container.padding.bottom;
+        containerFrame.size = CGSizeMake(self.container.padding.right + (curPoint.x - self.spacing), 
+                                   self.container.padding.top + self.container.padding.bottom + maxHeight);
     }
     
-    return size;
-}
-
-
-- (CGPoint)pointOfSubview:(NSUInteger)i withSize:(CGSize)size
-{
-    CGPoint p;
-    
-    if (i == lastSubviewIndex+1)
-    {
-        if (direction == EUIBoxLayoutDirectionVertical)
-        {
-            p.y = curPos;
-            p.x = self.container.padding.left;
-            curPos += size.height + spacing;
-        }
-        else
-        {
-            p.x = curPos;
-            p.y = self.container.padding.top;
-            curPos += size.width + spacing;
-        }
-        
-        maxWidth = fmaxf(maxWidth, size.width);
-        maxHeight = fmaxf(maxHeight, size.height);
-        lastSubviewIndex++;
-    }
-    else
-    {
-        if (i == 0)
-        {
-            p.x = self.container.padding.left;
-            p.y = self.container.padding.top;
-        }
-        else
-        {
-            UIView *lastView = [self.container.subviews objectAtIndex:i-1];
-            
-            if (direction == EUIBoxLayoutDirectionVertical)
-            {
-                p.x = self.container.padding.left;
-                p.y = lastView.frame.origin.y + lastView.frame.size.height + spacing;
-            }
-            else
-            {
-                p.x = lastView.frame.origin.x + lastView.frame.size.width + spacing;
-                p.y = self.container.padding.top;
-            }
-        }
-    }
-    
-    return p;
-}
-
-
-- (void)willLayoutContainer
-{
-    lastSubviewIndex = -1;
-    curPos = self.direction == EUIBoxLayoutDirectionVertical ? self.container.padding.top : self.container.padding.left;
-    maxWidth = 0;
-    maxHeight = 0;
+    self.container.frame = containerFrame;
 }
 
 @end
