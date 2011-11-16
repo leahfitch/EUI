@@ -30,4 +30,8 @@ EUIContainerDelegate>
 
 - (void)flowLayoutCenter;
 
+- (void)gridLayout3byN;
+
+- (void)gridLayout5byN;
+
 @end

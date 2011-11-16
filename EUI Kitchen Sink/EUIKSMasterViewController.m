@@ -30,6 +30,8 @@
                               [NSArray arrayWithObjects:@"Flow Layout (left)", [NSValue valueWithPointer:@selector(flowLayoutLeft)], nil],
                               [NSArray arrayWithObjects:@"Flow Layout (right)", [NSValue valueWithPointer:@selector(flowLayoutRight)], nil],
                               [NSArray arrayWithObjects:@"Flow Layout (center)", [NSValue valueWithPointer:@selector(flowLayoutCenter)], nil],
+                              [NSArray arrayWithObjects:@"Grid Layout (3xN)", [NSValue valueWithPointer:@selector(gridLayout3byN)], nil],
+                              [NSArray arrayWithObjects:@"Grid Layout (5xN)", [NSValue valueWithPointer:@selector(gridLayout5byN)], nil],
                               nil];
     }
     return self;

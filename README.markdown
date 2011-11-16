@@ -10,6 +10,7 @@ These are the currently supported layouts:
 * Flow aligned left
 * Flow aligned right
 * Flow aligned center
+* Grid
 
 # Using it
 Clone the source and open up the project in XCode. You will see two targets. One is a kitchen sink 

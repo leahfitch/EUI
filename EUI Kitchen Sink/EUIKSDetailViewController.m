@@ -9,6 +9,7 @@
 #import "EUIKSDetailViewController.h"
 #import "EUIBoxLayout.h"
 #import "EUIFlowLayout.h"
+#import "EUIGridLayout.h"
 
 
 @implementation EUIKSDetailViewController
@@ -179,6 +180,40 @@
      }];
 }
 
+- (void)gridLayout3byN
+{
+    EUIGridLayout *gridLayout = [[EUIGridLayout alloc] init];
+    gridLayout.columns = 3;
+    gridLayout.spacing = 12;
+    self.container.layout = gridLayout;
+    
+    [UIView animateWithDuration:0.3 animations:^
+     {
+         CGRect containerFrame = self.container.frame;
+         containerFrame.size.width = 650;
+         containerFrame.size.height = 500;
+         self.container.frame = containerFrame;
+         [self.container.layout layoutContainer];
+     }];
+}
+
+
+- (void)gridLayout5byN
+{
+    EUIGridLayout *gridLayout = [[EUIGridLayout alloc] init];
+    gridLayout.columns = 5;
+    gridLayout.spacing = 12;
+    self.container.layout = gridLayout;
+    
+    [UIView animateWithDuration:0.3 animations:^
+     {
+         CGRect containerFrame = self.container.frame;
+         containerFrame.size.width = 650;
+         containerFrame.size.height = 500;
+         self.container.frame = containerFrame;
+         [self.container.layout layoutContainer];
+     }];
+}
 
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation

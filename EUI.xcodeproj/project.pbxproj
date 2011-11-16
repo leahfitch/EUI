@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		DD3A96D71474189E00BC6933 /* EUIFlowLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = DD3A96D51474189E00BC6933 /* EUIFlowLayout.h */; };
 		DD3A96D81474189E00BC6933 /* EUIFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = DD3A96D61474189E00BC6933 /* EUIFlowLayout.m */; };
+		DD3A96DB14741A6100BC6933 /* EUIGridLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = DD3A96D914741A6100BC6933 /* EUIGridLayout.h */; };
+		DD3A96DC14741A6100BC6933 /* EUIGridLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = DD3A96DA14741A6100BC6933 /* EUIGridLayout.m */; };
 		DD5494DF1472ABE600535BB0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD7E5A3114705FC5004E8522 /* UIKit.framework */; };
 		DD5494E01472ABE600535BB0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD72286B146E16F400149264 /* Foundation.framework */; };
 		DD5494E11472ABE600535BB0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD7E5A3414705FC5004E8522 /* CoreGraphics.framework */; };
@@ -44,6 +46,8 @@
 		DD3A96B61472BF5F00BC6933 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		DD3A96D51474189E00BC6933 /* EUIFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EUIFlowLayout.h; path = Layouts/EUIFlowLayout.h; sourceTree = "<group>"; };
 		DD3A96D61474189E00BC6933 /* EUIFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EUIFlowLayout.m; path = Layouts/EUIFlowLayout.m; sourceTree = "<group>"; };
+		DD3A96D914741A6100BC6933 /* EUIGridLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EUIGridLayout.h; path = Layouts/EUIGridLayout.h; sourceTree = "<group>"; };
+		DD3A96DA14741A6100BC6933 /* EUIGridLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EUIGridLayout.m; path = Layouts/EUIGridLayout.m; sourceTree = "<group>"; };
 		DD5494DD1472ABE600535BB0 /* EUI Kitchen Sink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EUI Kitchen Sink.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD5494EC1472ABE600535BB0 /* EUIKSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EUIKSAppDelegate.m; sourceTree = "<group>"; };
 		DD5494EE1472ABE600535BB0 /* EUIKSMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EUIKSMasterViewController.h; sourceTree = "<group>"; };
@@ -178,6 +182,8 @@
 				DD722882146E1FDC00149264 /* EUILayout.m */,
 				DD722889146E284100149264 /* EUIBoxLayout.h */,
 				DD72288A146E284100149264 /* EUIBoxLayout.m */,
+				DD3A96D914741A6100BC6933 /* EUIGridLayout.h */,
+				DD3A96DA14741A6100BC6933 /* EUIGridLayout.m */,
 			);
 			name = Layouts;
 			sourceTree = "<group>";
@@ -193,6 +199,7 @@
 				DD722887146E200E00149264 /* EUIContainer.h in Headers */,
 				DD72288B146E284100149264 /* EUIBoxLayout.h in Headers */,
 				DD3A96D71474189E00BC6933 /* EUIFlowLayout.h in Headers */,
+				DD3A96DB14741A6100BC6933 /* EUIGridLayout.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +300,7 @@
 				DD722888146E200E00149264 /* EUIContainer.m in Sources */,
 				DD72288C146E284100149264 /* EUIBoxLayout.m in Sources */,
 				DD3A96D81474189E00BC6933 /* EUIFlowLayout.m in Sources */,
+				DD3A96DC14741A6100BC6933 /* EUIGridLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
