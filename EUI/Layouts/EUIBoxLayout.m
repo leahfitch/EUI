@@ -17,7 +17,7 @@
 
 - (void)updatePoints:(CGPoint *)points forSizes:(CGSize *)sizes
 {
-    CGPoint curPoint = CGPointMake(self.container.padding.left, self.container.padding.right);
+    CGPoint curPoint = CGPointMake(self.container.padding.left, self.container.padding.top);
     CGFloat maxWidth = 0;
     CGFloat maxHeight = 0;
     
