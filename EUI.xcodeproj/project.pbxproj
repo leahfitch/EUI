@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C8EBC4816CEC44A00D7A946 /* EUIContainerController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C8EBC4616CEC44A00D7A946 /* EUIContainerController.h */; };
+		3C8EBC4916CEC44A00D7A946 /* EUIContainerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8EBC4716CEC44A00D7A946 /* EUIContainerController.m */; };
 		DD3A96D71474189E00BC6933 /* EUIFlowLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = DD3A96D51474189E00BC6933 /* EUIFlowLayout.h */; };
 		DD3A96D81474189E00BC6933 /* EUIFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = DD3A96D61474189E00BC6933 /* EUIFlowLayout.m */; };
 		DD3A96DB14741A6100BC6933 /* EUIGridLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = DD3A96D914741A6100BC6933 /* EUIGridLayout.h */; };
@@ -41,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3C8EBC4616CEC44A00D7A946 /* EUIContainerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EUIContainerController.h; sourceTree = "<group>"; };
+		3C8EBC4716CEC44A00D7A946 /* EUIContainerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EUIContainerController.m; sourceTree = "<group>"; };
 		DD3A96AF1472B11B00BC6933 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DD3A96B11472B92700BC6933 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
 		DD3A96B61472BF5F00BC6933 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -161,6 +165,8 @@
 				DD722886146E200E00149264 /* EUIContainer.m */,
 				DD722878146E170300149264 /* Layouts */,
 				DD72286E146E16F400149264 /* Supporting Files */,
+				3C8EBC4616CEC44A00D7A946 /* EUIContainerController.h */,
+				3C8EBC4716CEC44A00D7A946 /* EUIContainerController.m */,
 			);
 			path = EUI;
 			sourceTree = "<group>";
@@ -200,6 +206,7 @@
 				DD72288B146E284100149264 /* EUIBoxLayout.h in Headers */,
 				DD3A96D71474189E00BC6933 /* EUIFlowLayout.h in Headers */,
 				DD3A96DB14741A6100BC6933 /* EUIGridLayout.h in Headers */,
+				3C8EBC4816CEC44A00D7A946 /* EUIContainerController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +308,7 @@
 				DD72288C146E284100149264 /* EUIBoxLayout.m in Sources */,
 				DD3A96D81474189E00BC6933 /* EUIFlowLayout.m in Sources */,
 				DD3A96DC14741A6100BC6933 /* EUIGridLayout.m in Sources */,
+				3C8EBC4916CEC44A00D7A946 /* EUIContainerController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
