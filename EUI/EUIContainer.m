@@ -1,11 +1,3 @@
-//
-//  EUIContainer.m
-//  EUI
-//
-//  Created by Elisha Cook on 11/11/11.
-//  Copyright (c) 2011 Elisha Cook. All rights reserved.
-//
-
 #import "EUIContainer.h"
 #import "EUILayout.h"
 

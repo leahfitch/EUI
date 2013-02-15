@@ -163,10 +163,10 @@
 			children = (
 				DD722885146E200E00149264 /* EUIContainer.h */,
 				DD722886146E200E00149264 /* EUIContainer.m */,
-				DD722878146E170300149264 /* Layouts */,
-				DD72286E146E16F400149264 /* Supporting Files */,
 				3C8EBC4616CEC44A00D7A946 /* EUIContainerController.h */,
 				3C8EBC4716CEC44A00D7A946 /* EUIContainerController.m */,
+				DD722878146E170300149264 /* Layouts */,
+				DD72286E146E16F400149264 /* Supporting Files */,
 			);
 			path = EUI;
 			sourceTree = "<group>";
