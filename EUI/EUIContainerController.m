@@ -18,9 +18,4 @@
     return (EUIContainer *)self.view;
 }
 
-- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
-{
-    [self.container.layout layoutContainer];
-}
-
 @end

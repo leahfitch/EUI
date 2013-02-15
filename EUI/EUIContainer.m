@@ -47,4 +47,17 @@
     }
 }
 
+- (void)layoutSubviews
+{
+    [self.layout layoutContainer];
+    
+    for (UIView *view in self.subviews)
+    {
+        if ([view isKindOfClass:[EUIContainer class]])
+        {
+            [view layoutIfNeeded];
+        }
+    }
+}
+
 @end

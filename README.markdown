@@ -22,8 +22,9 @@ Ok, it's pretty simple. There is an `EUIContainer` class which is a subclass of 
 you create an `EUIContainer` and set its `layout` property to one of the `EUILayout` classes. Containers
 can have a delegate which will get notified when the size of the container changes. `EUILayout` will lay out
 its container's subviews when it is sent the message `layoutContainer`. You can also layout the container
-*and* specify the sizes for each subview at the same time by sending `layoutContainerWithSubviewSizes`.
-This makes it possible to animate a lot of changes in one block smoothly.
+*and* specify the sizes for each subview at the same time by sending `layoutContainerWithSubviewSizes`. 
+This makes it possible to animate a lot of changes in one block smoothly. Container's update their own layout 
+as well as their children's when `layoutSubviews` is called. 
 
 Don't forget to check out the example app if it's not clicking.
 
