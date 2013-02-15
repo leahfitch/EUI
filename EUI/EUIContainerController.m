@@ -1,5 +1,6 @@
 #import "EUIContainerController.h"
 #import "EUIContainer.h"
+#import "EUILayout.h"
 
 @interface EUIContainerController ()
 
@@ -15,6 +16,11 @@
 - (EUIContainer *)container
 {
     return (EUIContainer *)self.view;
+}
+
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
+{
+    [self.container.layout layoutContainer];
 }
 
 @end
